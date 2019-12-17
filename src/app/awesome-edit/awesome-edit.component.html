@@ -1,0 +1,28 @@
+<h1>Edit/Delete</h1>
+<form [formGroup]="awesomeForm" (ngSubmit)="onSubmit()" class="col-8">
+  <table class="table">
+    <tr>
+      <td>Id</td>
+      <td><input type="text" formControlName="id" readonly></td>
+    </tr>
+    <tr>
+      <td>Tag</td>
+      <td><input type="text" formControlName="tag"></td>
+    </tr>
+    <tr>
+      <td>URL</td>
+      <td><input type="text" formControlName="url"></td>
+    </tr>
+    <tr>
+      <td>Descriptions</td>
+      <td><textarea type="text" formControlName="descriptions"></textarea></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>
+        <button type="submit">Edit</button>
+        <button type="submit" (click)="deleteAwesome(awesomeForm.value)">Delete</button>
+      </td>
+    </tr>
+  </table>
+</form>

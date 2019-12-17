@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>My Awesome List</h1>
+  <h3 routerLink="/create">Create</h3>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Tag</th>
+      <th scope="col">URL</th>
+      <th scope="col">Description</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody *ngFor="let item of awesomes">
+    <tr>
+      <td>{{item.tag}}</td>
+      <td>{{item.url}}</td>
+      <td>{{item.descriptions}}</td>
+      <td><button class="btn btn-info" type="button" (click)="goToEdit(item)">Edit/Delete</button></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
